@@ -1,0 +1,26 @@
+<div class="sign-in">
+    <div class="web-name">
+        <app-header></app-header>
+    </div>
+
+    <div class="container">
+        <div class="sign-in-form">
+            <h3>Sign In</h3>
+        
+            <form class="inputs">
+                <input ngModel name="username" #username="ngModel" type="text" placeholder="Username" required>
+                <div class="required"><p *ngIf="!username.valid && username.touched">Username is required</p></div>
+                <input ngModel name="password" #password="ngModel" type="password" placeholder="Password" required>
+                <div class="required"><p *ngIf="!password.valid && password.touched">Password is required</p></div>
+            </form>
+        
+            <app-button routerLink="../home-screen" b_color="#5050fd" t_color="white" fs="17px" fw="bold" text="Login"></app-button>
+            <div class="help-option">
+                <app-hr w="300px"></app-hr>
+                <a routerLink="../forgot-password">Forgot password?</a>
+                <app-button routerLink="../sign-up" b_color="#4CAF50" t_color="white" fs="17px" fw="bold" text="Create new account"></app-button>
+            </div>
+        </div>
+        
+    </div>
+</div>

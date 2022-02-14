@@ -1,0 +1,14 @@
+table {
+    border-collapse: collapse;
+}
+
+thead >tr >th, tbody >tr >th {
+    padding: 17px 20px 17px 13px;
+    text-align: start;
+    border-bottom: 1px solid #9f9f9f;
+    
+}
+
+tbody >tr >th {
+    font-weight: normal;
+}

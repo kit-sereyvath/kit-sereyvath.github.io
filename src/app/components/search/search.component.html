@@ -1,0 +1,21 @@
+<div class="search-bar">
+
+    <h4>{{label_date}}</h4>
+    <input type="date">
+
+    <h4>{{label_time}}</h4>
+    <select class="time" id="time">
+        <option *ngFor="let time of times" [value]="time">
+            {{ time }}
+        </option>
+    </select>
+
+    <h4>{{label_province}}</h4>
+    <select class="location" id="location">
+        <option *ngFor="let location of locations" [value]="location">
+            {{ location }}
+        </option>
+    </select>
+    
+    <app-button fw="bold" text="Search"></app-button>
+</div>

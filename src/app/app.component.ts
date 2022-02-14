@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Final';
+  username: string = "Username";
+  sign_up_in_inside_visibility: boolean = true
+
+  logout() {
+    this.sign_up_in_inside_visibility = true
+  }
+
+  login() {
+    this.sign_up_in_inside_visibility = false
+  }
 }

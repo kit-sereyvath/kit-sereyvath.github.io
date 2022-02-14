@@ -1,0 +1,29 @@
+* {
+    font-size: 13px;
+}
+
+.input-date-time {
+    width: 160px;
+    padding: 20px 15px;
+}
+
+.input-date-time >p {
+    padding: 5px 5px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #6d6d6d;
+}
+
+.input-date-time .date {
+    margin: 0px 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 1px solid #9f9f9f;
+}
+
+.input-date-time >select {
+    margin: 0px 5px;
+    padding: 4px 5px;
+    border-radius: 5px;
+    border: 1px solid #9f9f9f;
+}

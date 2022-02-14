@@ -1,0 +1,25 @@
+<div class="input-date-time">
+
+    <app-title-input title="Date and Place"></app-title-input>
+    <app-hr w="100px"></app-hr>
+
+    <p>{{label_date}}</p>
+    <input class="date" id="" type="date" required>
+
+
+    <p>{{label_time}}</p>
+    <select id="input-time">
+        <option *ngFor="let time of times" [value]="time">
+            {{ time }}
+        </option>
+    </select>
+
+
+    <p>{{label_location}}</p>
+    <select id="input-location">
+        <option *ngFor="let location of locations" [value]="location">
+            {{ location }}
+        </option>
+    </select>
+    
+</div>

@@ -1,0 +1,58 @@
+.records-table {
+    background-color: white;
+    height: 400px;
+    width: 1272px;
+    margin: 10px;
+    border: 1px solid #9F9F9F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.modification-table {
+    background-color: white;
+    height: 440px;
+    width: 670px;
+    margin: 10px;
+    border: 1px solid #9F9F9F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.switch-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.table-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 670px;
+    background-color: white;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: 1px solid #9F9F9F;
+}
+
+.table-title >p {
+    font-size: 25px;
+    padding: 0px 70px;
+}
+
+.add-delete-btn {
+    margin-right: 20px;
+}
+
+.input-types-forms {
+    display: flex;
+    flex-direction: row;
+}

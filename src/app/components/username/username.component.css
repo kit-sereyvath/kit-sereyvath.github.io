@@ -1,0 +1,9 @@
+.username {
+    display: flex;
+    flex-direction: row;
+}
+
+h4 {
+    padding: 7px 10px;
+    font-size: 18px;
+}

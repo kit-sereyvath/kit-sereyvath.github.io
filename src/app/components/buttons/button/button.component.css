@@ -1,0 +1,13 @@
+.btn {
+    display: inline-block;
+    background-color: #FFE600;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}

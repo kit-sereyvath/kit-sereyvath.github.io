@@ -1,12 +1,18 @@
 .records-table {
     background-color: white;
-    height: 400px;
-    width: 1272px;
+    height: 440px;
+    width: 1268px;
     margin: 10px;
     border: 1px solid #9F9F9F;
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.records-table >h3 {
+    font-size: 30px;
+    padding: 20px 0 10px 50px;
 }
 
 .modification-table {

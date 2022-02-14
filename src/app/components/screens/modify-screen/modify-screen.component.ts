@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModifyScreenComponent implements OnInit {
 
+  username: string = "Username";
+
   constructor() { }
 
   ngOnInit(): void {

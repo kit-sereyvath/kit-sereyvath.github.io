@@ -3,7 +3,7 @@ table {
 }
 
 thead >tr >th, tbody >tr >th {
-    padding: 17px 20px 17px 13px;
+    padding: 17px 16px 17px 15px;
     text-align: start;
     border-bottom: 1px solid #9f9f9f;
     
@@ -11,4 +11,16 @@ thead >tr >th, tbody >tr >th {
 
 tbody >tr >th {
     font-weight: normal;
+}
+
+tbody >tr >th >i {
+    font-size: 17.5px;
+}
+
+.fa-edit {
+    color: #757575;
+}
+
+.fa-close {
+    color: #f44336;
 }

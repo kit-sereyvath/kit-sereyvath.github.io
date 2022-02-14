@@ -1,0 +1,21 @@
+.group-btns {
+    width: 1268px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.page-btn {
+    border: none;
+    outline: none;
+    padding: 5px 13px;
+    background-color: #bebebe;
+    cursor: pointer;
+    font-size: 15px;
+    float: left;
+}
+
+.page-btn:hover {
+    background-color: #666;
+    color: white;
+}

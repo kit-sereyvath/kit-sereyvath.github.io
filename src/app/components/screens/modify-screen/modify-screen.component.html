@@ -1,0 +1,16 @@
+<div>
+    <header>
+        <app-header></app-header>
+        <div class="profile-and-search">
+            <div class="username">
+                <h4> {{ username }}</h4>
+                <app-button routerLink="../login" b_color="#f44336" t_color="white" b padding="5px 10px" text="Logout" ></app-button>
+            </div>
+            
+            <app-search></app-search>
+        </div>
+    </header>
+    <body>
+        <app-modification-table></app-modification-table>
+    </body>
+</div>

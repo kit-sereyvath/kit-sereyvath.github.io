@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ResponseMessage } from 'src/models/res-message';
 import { WeatherData } from 'src/models/weather-data';
 
@@ -28,6 +28,20 @@ export class WeatherDataService {
     return this.http.post<ResponseMessage>("http://localhost:3000/weather-data", this.weatherData)
   }
 
+
+  updateWeatherData(): Observable<ResponseMessage>{
+    this.currentMessage.subscribe(data => {
+      this.weatherData.id = data.id
+    })
+    return this.http.put<ResponseMessage>("http://localhost:3000/weather-data", this.weatherData)
+  }
+
+
+  private messageSource = new BehaviorSubject(new WeatherData);
+  currentMessage = this.messageSource.asObservable();
+  changeMessage(toModify: WeatherData) {
+    this.messageSource.next(toModify)
+  }
 
 
   initProvince(province: string){

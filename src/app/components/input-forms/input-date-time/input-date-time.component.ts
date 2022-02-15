@@ -23,11 +23,17 @@ export class InputDateTimeComponent implements OnInit {
   wdate: string = "02/02/2022"
 
   ngOnInit(): void {
-    this.wdate = new Date().toISOString().split('T')[0];
-    this.provinceSelected()
-    this.dateSelected()
-    this.timeSelected()
+    this.weatherDataService.currentMessage.subscribe(data => {
+      this.wprovince = data.province
+      this.wtime = data.time
+      this.wdate = data.date
+
+      this.provinceSelected()
+      this.dateSelected()
+      this.timeSelected()
+    })
   }
+    
 
   provinceSelected(){
     this.weatherDataService.initProvince(this.wprovince)

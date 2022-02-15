@@ -21,6 +21,17 @@ export class InputTempComponent implements OnInit {
   wfeel: any = null
 
   ngOnInit(): void {
+    this.weatherDataService.currentMessage.subscribe(data => {
+      this.wtemp = data.temp
+      this.wmin = data.min_temp
+      this.wmax = data.max_temp
+      this.wfeel = data.feel_like
+
+      this.initTemp()
+      this.initFeel()
+      this.initMax()
+      this.initMin()
+    })
   }
 
   initTemp(){

@@ -8,8 +8,8 @@
         <div class="table-title">
             <p>{{ modify_title }}</p>
             <div class="add-delete-btn">
-                <app-button routerLink="../home-screen" b_color="#1260cc" t_color="white" fs="13px" text="Update" fw="bold"></app-button>
-                <app-button routerLink="../home-screen" b_color="#f44336" t_color="white" fs="13px" text="Delete" fw="bold"></app-button>
+                <app-button (click)="updateWeatherData()" b_color="#1260cc" t_color="white" fs="13px" text="Update" fw="bold"></app-button>
+                <app-button b_color="#f44336" t_color="white" fs="13px" text="Delete" fw="bold"></app-button>
                 <app-button routerLink="../home-screen" b_color="#4CAF50" t_color="white" fs="13px" text="Cancel" fw="bold"></app-button>
             </div>
         </div>

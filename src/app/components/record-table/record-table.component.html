@@ -31,7 +31,7 @@
             <th>{{weatherData.air_quality}}%</th>
             <th>{{weatherData.cloud}}%</th>
             <th>{{weatherData.humidity}}%</th>
-            <th><i routerLink="../modify-screen" class="fa fa-edit"></i></th>
+            <th><i class="fa fa-edit" (click)="modifiWeatherData(weatherData)"></i></th>
             <th><i class="fa fa-close"></i></th>
         </tr>
     </tbody>

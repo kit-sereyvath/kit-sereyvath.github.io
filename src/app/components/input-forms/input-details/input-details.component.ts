@@ -23,6 +23,19 @@ export class InputDetailsComponent implements OnInit {
   constructor(private weatherDataService: WeatherDataService) { }
 
   ngOnInit(): void {
+    this.weatherDataService.currentMessage.subscribe(data => {
+      this.wpressure = data.pressure
+      this.wwind = data.wind
+      this.whumidity = data.humidity
+      this.wcloud = data.cloud
+      this.wair = data.air_quality
+
+      this.initPressure()
+      this.initAir()
+      this.initCloud()
+      this.initHumidity()
+      this.initWind()
+    })
   }
 
   initPressure(){

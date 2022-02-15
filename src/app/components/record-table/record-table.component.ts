@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WeatherData } from 'src/models/weather-data';
 import { WeatherDataService } from 'src/services/weather-data.service';
 
@@ -9,7 +10,10 @@ import { WeatherDataService } from 'src/services/weather-data.service';
 })
 export class RecordTableComponent implements OnInit {
 
-  constructor(private weatherDataService: WeatherDataService) { }
+  constructor(
+    private weatherDataService: WeatherDataService,
+    private router: Router
+    ) { }
 
   weatherDataAll: WeatherData[] = []
   weatherDatas: WeatherData[] = []
@@ -36,4 +40,8 @@ export class RecordTableComponent implements OnInit {
     this.weatherDatas = this.weatherDataAll.slice(5*this.count, 5*(this.count+1))
   }
 
+  modifiWeatherData(weatherData: WeatherData){
+    this.weatherDataService.changeMessage(weatherData)
+    this.router.navigate(['/', 'modify-screen'])
+  }
 }

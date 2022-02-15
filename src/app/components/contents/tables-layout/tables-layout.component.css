@@ -5,7 +5,7 @@
     margin: 10px;
     border: 1px solid #9F9F9F;
     border-radius: 10px;
-    display: flex;
+    
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -22,12 +22,12 @@
     margin: 10px;
     border: 1px solid #9F9F9F;
     border-radius: 10px;
-    display: flex;
+    
     flex-direction: column;
 }
 
 .container {
-    display: flex;
+    
     justify-content: space-evenly;
 }
 
@@ -61,4 +61,9 @@
 .input-types-forms {
     display: flex;
     flex-direction: row;
+}
+
+.apb {
+    margin-bottom: 0px;
+    position: fixed;
 }

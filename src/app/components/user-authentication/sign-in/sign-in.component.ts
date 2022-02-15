@@ -30,6 +30,7 @@ export class SignInComponent implements OnInit {
     } else {
       this.userService.authenticateUser(this.user).subscribe(data => {
         if(data.message === "success"){
+          this.userService.initUsername(this.username)
           this.router.navigate(['/', 'home-screen'])
         } else {
           alert("Wrong username or password!\nPlease try again!!")
@@ -37,5 +38,4 @@ export class SignInComponent implements OnInit {
       })
     }
   }
-
 }

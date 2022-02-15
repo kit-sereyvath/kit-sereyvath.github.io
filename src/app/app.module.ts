@@ -60,7 +60,8 @@ import { WeatherDataService } from 'src/services/weather-data.service';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [UserService, WeatherDataService],
   bootstrap: [AppComponent]

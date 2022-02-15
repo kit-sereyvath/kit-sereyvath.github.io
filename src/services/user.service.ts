@@ -11,11 +11,20 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  username = ""
+
   authenticateUser(user: User): Observable<ResponseMessage>{
     return this.http.post<ResponseMessage>('http://localhost:3000/user', user)
   }
 
   createUser(user: User): Observable<ResponseMessage>{
     return this.http.post<ResponseMessage>('http://localhost:3000/user/new', user)
+  }
+
+  initUsername(username: string){
+    this.username = username
+  }
+  getUsername(){
+    return this.username
   }
 }

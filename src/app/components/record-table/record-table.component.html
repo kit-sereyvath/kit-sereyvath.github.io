@@ -18,80 +18,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th>01/02/2022</th>
-            <th>1am</th>
-            <th>Somewhere</th>
-            <th>28</th>
-            <th>27</th>
-            <th>27</th>
-            <th>30</th>
-            <th>10000pa</th>
-            <th>14 km/h</th>
-            <th>Something</th>
-            <th>20%</th>
-            <th>10%</th>
-            <th><i routerLink="../modify-screen" class="fa fa-edit"></i></th>
-            <th><i class="fa fa-close"></i></th>
-        </tr>
-        <tr>
-            <th>01/02/2022</th>
-            <th>1am</th>
-            <th>Somewhere</th>
-            <th>28</th>
-            <th>27</th>
-            <th>27</th>
-            <th>30</th>
-            <th>10000pa</th>
-            <th>14 km/h</th>
-            <th>Something</th>
-            <th>20%</th>
-            <th>10%</th>
-            <th><i routerLink="../modify-screen" class="fa fa-edit"></i></th>
-            <th><i class="fa fa-close"></i></th>
-        </tr><tr>
-            <th>01/02/2022</th>
-            <th>1am</th>
-            <th>Somewhere</th>
-            <th>28</th>
-            <th>27</th>
-            <th>27</th>
-            <th>30</th>
-            <th>10000pa</th>
-            <th>14 km/h</th>
-            <th>Something</th>
-            <th>20%</th>
-            <th>10%</th>
-            <th><i routerLink="../modify-screen" class="fa fa-edit"></i></th>
-            <th><i class="fa fa-close"></i></th>
-        </tr><tr>
-            <th>01/02/2022</th>
-            <th>1am</th>
-            <th>Somewhere</th>
-            <th>28</th>
-            <th>27</th>
-            <th>27</th>
-            <th>30</th>
-            <th>10000pa</th>
-            <th>14 km/h</th>
-            <th>Something</th>
-            <th>20%</th>
-            <th>10%</th>
-            <th><i routerLink="../modify-screen" class="fa fa-edit"></i></th>
-            <th><i class="fa fa-close"></i></th>
-        </tr><tr>
-            <th>01/02/2022</th>
-            <th>1am</th>
-            <th>Somewhere</th>
-            <th>28</th>
-            <th>27</th>
-            <th>27</th>
-            <th>30</th>
-            <th>10000pa</th>
-            <th>14 km/h</th>
-            <th>Something</th>
-            <th>20%</th>
-            <th>10%</th>
+        <tr *ngFor="let weatherData of weatherDatas">
+            <th>{{weatherData.date}}</th>
+            <th>{{weatherData.time}}</th>
+            <th>{{weatherData.province}}</th>
+            <th>{{weatherData.temp}}</th>
+            <th>{{weatherData.feel_like}}</th>
+            <th>{{weatherData.min_temp}}</th>
+            <th>{{weatherData.max_temp}}</th>
+            <th>{{weatherData.pressure}}</th>
+            <th>{{weatherData.wind}}</th>
+            <th>{{weatherData.air_quality}}%</th>
+            <th>{{weatherData.cloud}}%</th>
+            <th>{{weatherData.humidity}}%</th>
             <th><i routerLink="../modify-screen" class="fa fa-edit"></i></th>
             <th><i class="fa fa-close"></i></th>
         </tr>

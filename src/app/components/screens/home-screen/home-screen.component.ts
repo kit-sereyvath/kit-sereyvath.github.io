@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherData } from 'src/models/weather-data';
 import { UserService } from 'src/services/user.service';
+import { WeatherDataService } from 'src/services/weather-data.service';
 
 @Component({
   selector: 'app-home-screen',
@@ -10,12 +12,16 @@ export class HomeScreenComponent implements OnInit {
 
   
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private weatherDataService: WeatherDataService
   ) { }
 
+  weatherData = new WeatherData()
+  weatherDatas: WeatherData[] = []
   username: string = this.userService.getUsername()
   
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+  }
 
 }

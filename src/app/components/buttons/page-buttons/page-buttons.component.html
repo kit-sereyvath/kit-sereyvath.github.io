@@ -1,12 +1,6 @@
 <div class="group-btns">
-    <button class="page-btn">1</button>
-    <button class="page-btn">2</button>
-    <button class="page-btn">3</button>
-    <button class="page-btn">4</button>
-    <button class="page-btn">5</button>
-    <button class="page-btn">6</button>
-    <button class="page-btn">7</button>
-    <button class="page-btn">8</button>
-    <button class="page-btn">9</button>
-    <button class="page-btn">10</button>
+    <button class="page-btn" (click)="backone()"><</button>
+    <button class="page-btn">{{page}}</button>
+    <button class="page-btn">of {{total_page}}</button>
+    <button class="page-btn" (click)="forwardone()">></button>
 </div>

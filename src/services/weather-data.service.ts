@@ -10,16 +10,25 @@ import { WeatherData } from 'src/models/weather-data';
 export class WeatherDataService {
 
   weatherData = new WeatherData()
+  weatherDatas: WeatherData[] = []
+  length: number = 0
 
   constructor(private http: HttpClient) { }
 
   getAllWeatherData(searchParams: WeatherData): Observable<WeatherData[]>{
-    return this.http.get<WeatherData[]>("http://localhost:3000/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
+    const res = this.http.get<WeatherData[]>("http://localhost:3000/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
+    res.subscribe(data => {
+      this.length = data.length
+    })
+    return res
   }
+
 
   insertWeatherData(): Observable<ResponseMessage>{
     return this.http.post<ResponseMessage>("http://localhost:3000/weather-data", this.weatherData)
   }
+
+
 
   initProvince(province: string){
     this.weatherData.province = province

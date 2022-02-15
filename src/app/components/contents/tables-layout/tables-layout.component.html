@@ -6,9 +6,9 @@
 
 <div class="container">
     <div class="records-table">
-        <h3>360 Records</h3>
-        <app-record-table></app-record-table>
-        <app-page-buttons></app-page-buttons>
+        <h3>{{records_number}} Records</h3>
+        <app-record-table #app_record_table></app-record-table>
+        <app-page-buttons (forward)="app_record_table.nextWeatherData()" (backward)="app_record_table.previousWeatherData()"></app-page-buttons>
     </div>
 </div>
 

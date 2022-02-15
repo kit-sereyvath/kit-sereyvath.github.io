@@ -8,7 +8,7 @@
         <div class="table-title">
             <p>{{ insert_title }}</p>
             <div class="add-delete-btn">
-                <app-button b_color="#4CAF50" t_color="white" fs="13px" text="Add" fw="bold"></app-button>
+                <app-button (click)="insertWeatherData()" b_color="#4CAF50" t_color="white" fs="13px" text="Add" fw="bold"></app-button>
                 <app-button b_color="#f44336" t_color="white" fs="13px" text="Clear" fw="bold"></app-button>
             </div>
         </div>

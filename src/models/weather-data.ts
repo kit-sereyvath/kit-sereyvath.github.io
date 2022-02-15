@@ -4,15 +4,15 @@ export class WeatherData {
     date: string;
     time: string;
     description: string;
-    temp: number;
-    feel_like: number;
-    min_temp: number;
-    max_temp: number;
-    pressure: number;
-    wind: number;
-    air_quality: number;
-    cloud: number;
-    humidity: number;
+    temp: any;
+    feel_like: any;
+    min_temp: any;
+    max_temp: any;
+    pressure: any;
+    wind: any;
+    air_quality: any;
+    cloud: any;
+    humidity: any;
 
     constructor(){
         this.id = ""
@@ -20,14 +20,14 @@ export class WeatherData {
         this.date = ""
         this.time = ""
         this.description = ""
-        this.temp = 0
-        this.min_temp = 0
-        this.max_temp = 0
-        this.cloud = 0
-        this.air_quality = 0
-        this.humidity = 0
-        this.pressure = 0
-        this.feel_like = 0
-        this.wind = 0
+        this.temp = null
+        this.min_temp = null
+        this.max_temp = null
+        this.cloud = null
+        this.air_quality = null
+        this.humidity = null
+        this.pressure = null
+        this.feel_like = null
+        this.wind = null
     }
 }

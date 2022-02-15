@@ -3,14 +3,14 @@
     <app-hr w="180px"></app-hr>
 
     <p>{{ label_temp }}</p>
-    <input class="temp" id="" type="number" placeholder="Enter temperature">
+    <input class="temp" id="" type="number" placeholder="Enter temperature" [(ngModel)]="wtemp" (change)="initTemp()">
 
     <p>{{ label_temp_feel }}</p>
-    <input class="temp" id="" type="number" placeholder="Enter temperature">
+    <input class="temp" id="" type="number" placeholder="Enter temperature" [(ngModel)]="wfeel" (change)="initFeel()">
 
     <p>{{ label_temp_min }}</p>
-    <input class="temp" id="" type="number" placeholder="Enter temperature">
+    <input class="temp" id="" type="number" placeholder="Enter temperature" [(ngModel)]="wmin" (change)="initMin()">
 
     <p>{{ label_temp_max }}</p>
-    <input class="temp" id="" type="number" placeholder="Enter temperature">
+    <input class="temp" id="" type="number" placeholder="Enter temperature" [(ngModel)]="wmax" (change)="initMax()">
 </div>

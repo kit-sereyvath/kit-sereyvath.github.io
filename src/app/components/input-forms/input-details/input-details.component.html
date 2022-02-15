@@ -3,17 +3,17 @@
     <app-hr w="180px"></app-hr>
 
     <p>{{ label_pressure }}</p>
-    <input id="" type="number" placeholder="Enter pressure">
+    <input id="" type="number" placeholder="Enter pressure" [(ngModel)]="wpressure" (change)="initPressure()">
 
     <p>{{ label_wind }}</p>
-    <input id="" type="number" placeholder="Enter wind">
+    <input id="" type="number" placeholder="Enter wind" [(ngModel)]="wwind" (change)="initWind()">
 
     <p>{{ label_air_quality }}</p>
-    <input id="" type="text" placeholder="Enter air quality">
+    <input id="" type="text" placeholder="Enter air quality" [(ngModel)]="wair" (change)="initAir()">
 
     <p>{{ label_cloud }}</p>
-    <input id="" type="text" placeholder="Enter cloud">
+    <input id="" type="text" placeholder="Enter cloud" [(ngModel)]="wcloud" (change)="initCloud()">
 
     <p>{{ label_humidity }}</p>
-    <input id="" type="number" placeholder="Enter humidity">
+    <input id="" type="number" placeholder="Enter humidity" [(ngModel)]="whumidity" (change)="initHumidity()">
 </div>

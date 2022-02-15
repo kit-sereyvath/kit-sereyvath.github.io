@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherDataService } from 'src/services/weather-data.service';
 
 @Component({
   selector: 'app-input-date-time',
@@ -15,11 +16,29 @@ export class InputDateTimeComponent implements OnInit {
 
   locations: string[] = ['--- none ---', 'Banteay Meanchey', 'Battambang', 'Kampong Cham', 'Kampong Chhnang', 'Kampong Speu', 'Kampong Thom', 'Kampot', 'Koh Kong', 'Kratié', 'Mondulkiri', 'Phnom Penh', 'Preah Vihear', 'Prey Veng', ' Pursat', 'Ratanak Kiri', 'Siem Reap', 'Preah Sihanouk Ville', 'Stung Treng', 'Svay Rieng', 'Tbong Khmum', 'Takéo', 'Oddar Meanchey', 'Kep', 'Pailin'];
 
+  constructor(private weatherDataService: WeatherDataService) { }
 
-
-  constructor() { }
+  wprovince: string = "Phnom Penh"
+  wtime: string = "1am";
+  wdate: string = "02/02/2022"
 
   ngOnInit(): void {
+    this.wdate = new Date().toISOString().split('T')[0];
+    this.provinceSelected()
+    this.dateSelected()
+    this.timeSelected()
+  }
+
+  provinceSelected(){
+    this.weatherDataService.initProvince(this.wprovince)
+  }
+
+  dateSelected(){
+    this.weatherDataService.initDate(this.wdate)
+  }
+
+  timeSelected(){
+    this.weatherDataService.initTime(this.wtime)
   }
 
 }

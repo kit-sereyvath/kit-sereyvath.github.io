@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherDataService } from 'src/services/weather-data.service';
 
 @Component({
   selector: 'app-input-details',
@@ -13,10 +14,31 @@ export class InputDetailsComponent implements OnInit {
   label_cloud: string = 'Cloud ( % )';
   label_humidity: string = 'Humidity ( % )';
 
+  wpressure: any = null
+  wwind: any = null
+  wair: any = null
+  whumidity: any = null
+  wcloud: any = null
 
-  constructor() { }
+  constructor(private weatherDataService: WeatherDataService) { }
 
   ngOnInit(): void {
+  }
+
+  initPressure(){
+    this.weatherDataService.initPressure(this.wpressure)
+  }
+  initWind(){
+    this.weatherDataService.initWind(this.wwind)
+  }
+  initAir(){
+    this.weatherDataService.initAirQuality(this.wair)
+  }
+  initCloud(){
+    this.weatherDataService.initCloud(this.wcloud)
+  }
+  initHumidity(){
+    this.weatherDataService.initHumidity(this.whumidity)
   }
 
 }

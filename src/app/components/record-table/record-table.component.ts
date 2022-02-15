@@ -24,6 +24,9 @@ export class RecordTableComponent implements OnInit {
   count = 0
 
   ngOnInit(): void {
+    this.weatherDataService.searchParams.subscribe(data => {
+      this.searchParams = data
+    })
     this.weatherDataService.getAllWeatherData(this.searchParams).subscribe( data => {
       this.weatherDataAll = data.reverse()
       this.weatherDatas = this.weatherDataAll.slice(0, 5)

@@ -8,6 +8,8 @@ import { SignUpComponent } from './components/user-authentication/sign-up/sign-u
 import { ForgotPasswordComponent } from './components/user-authentication/forgot-password/forgot-password.component';
 import { InsertScreenComponent } from './components/screens/insert-screen/insert-screen.component';
 import { ModifyScreenComponent } from './components/screens/modify-screen/modify-screen.component';
+import { SearchScreenComponent } from './components/screens/search-screen/search-screen.component';
+import { BsearchScreenComponent } from './components/screens/bsearch-screen/bsearch-screen.component';
 
 const routes: Routes = [
   {path: 'login', component: SignInComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'home-screen', component: HomeScreenComponent},
   {path: 'insert-screen', component: InsertScreenComponent},
   {path: 'modify-screen', component: ModifyScreenComponent},
+  {path: 'search', component: SearchScreenComponent},
+  {path: 'bsearch', component: BsearchScreenComponent},
 ]
 
 @NgModule({

@@ -36,6 +36,13 @@ export class WeatherDataService {
     return this.http.put<ResponseMessage>("http://localhost:3000/weather-data", this.weatherData)
   }
 
+  deleteWeatherData(): Observable<ResponseMessage>{
+    let searchParams = new WeatherData
+    this.currentMessage.subscribe(data => {
+      searchParams = data
+    })
+    return this.http.delete<ResponseMessage>("http://localhost:3000/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
+  }
 
   private messageSource = new BehaviorSubject(new WeatherData);
   currentMessage = this.messageSource.asObservable();
@@ -43,6 +50,17 @@ export class WeatherDataService {
     this.messageSource.next(toModify)
   }
 
+  private sp = new BehaviorSubject(new WeatherData);
+  searchParams = this.sp.asObservable()
+  changeSearchParams(search: WeatherData){
+    this.sp.next(search)
+  }
+
+  private sr = new BehaviorSubject(true)
+  searchRoute = this.sr.asObservable()
+  changeSearchRoute(change: boolean){
+    this.sr.next(change)
+  }
 
   initProvince(province: string){
     this.weatherData.province = province

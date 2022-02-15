@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.profile-and-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-and-search >app-username {
+    padding-left: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.username {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+h4 {
+    padding: 7px 10px;
+    font-size: 18px;
+}

@@ -29,6 +29,8 @@ import { PageButtonsComponent } from './components/buttons/page-buttons/page-but
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from 'src/services/user.service';
 import { WeatherDataService } from 'src/services/weather-data.service';
+import { SearchScreenComponent } from './components/screens/search-screen/search-screen.component';
+import { BsearchScreenComponent } from './components/screens/bsearch-screen/bsearch-screen.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { WeatherDataService } from 'src/services/weather-data.service';
     InsertScreenComponent,
     ModifyScreenComponent,
     PageButtonsComponent,
+    SearchScreenComponent,
+    BsearchScreenComponent,
   ],
   imports: [
     BrowserModule,

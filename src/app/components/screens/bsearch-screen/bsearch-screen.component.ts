@@ -4,21 +4,23 @@ import { UserService } from 'src/services/user.service';
 import { WeatherDataService } from 'src/services/weather-data.service';
 
 @Component({
-  selector: 'app-modify-screen',
-  templateUrl: './modify-screen.component.html',
-  styleUrls: ['./modify-screen.component.css']
+  selector: 'app-bsearch-screen',
+  templateUrl: './bsearch-screen.component.html',
+  styleUrls: ['./bsearch-screen.component.css']
 })
-export class ModifyScreenComponent implements OnInit {
+export class BsearchScreenComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private weatherDataService: WeatherDataService
   ) { }
 
+  weatherData = new WeatherData()
+  weatherDatas: WeatherData[] = []
   username: string = this.userService.getUsername()
-  weatherData = new WeatherData
+  
 
-  ngOnInit(): void {
-
+  ngOnInit(): void { 
   }
 
 }

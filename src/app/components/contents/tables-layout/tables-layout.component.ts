@@ -14,8 +14,10 @@ export class TablesLayoutComponent implements OnInit {
   records_number = 0
 
   ngOnInit(): void {
-    this.weatherDataService.getAllWeatherData(new WeatherData()).subscribe(data => {
-      this.records_number = data.length
+    this.weatherDataService.searchParams.subscribe(query => {
+      this.weatherDataService.getAllWeatherData(query).subscribe(data => {
+        this.records_number = data.length
+      })
     })
   }
 

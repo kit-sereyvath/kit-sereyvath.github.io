@@ -21,7 +21,8 @@ export class HomeScreenComponent implements OnInit {
   username: string = this.userService.getUsername()
   
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
+    this.weatherDataService.changeSearchParams(new WeatherData) 
   }
 
 }

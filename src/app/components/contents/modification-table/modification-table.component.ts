@@ -31,4 +31,18 @@ export class ModificationTableComponent implements OnInit {
       }
     })
   }
+
+  deleteWeatherData(){
+    if(confirm("Do you really want to delete this weather data?")){
+      this.weatherDataService.deleteWeatherData().subscribe(data => {
+        if (data.message === "success"){
+          alert("Successfully deleted the weather data!!")
+          this.router.navigate(['/', 'home-screen'])
+        }
+        else {
+          alert("Unable to delete the weather data!\nPlease try again!")
+        }
+      })
+    }
+  }
 }

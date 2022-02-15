@@ -26,6 +26,9 @@ import { InsertionTableComponent } from './components/contents/insertion-table/i
 import { InsertScreenComponent } from './components/screens/insert-screen/insert-screen.component';
 import { ModifyScreenComponent } from './components/screens/modify-screen/modify-screen.component';
 import { PageButtonsComponent } from './components/buttons/page-buttons/page-buttons.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from 'src/services/user.service';
+import { WeatherDataService } from 'src/services/weather-data.service';
 
 @NgModule({
   declarations: [
@@ -57,8 +60,9 @@ import { PageButtonsComponent } from './components/buttons/page-buttons/page-but
     AppRoutingModule,
     RouterModule,
     FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService, WeatherDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,13 +8,11 @@
             <h3>Register</h3>
         
             <form class="inputs">
-                <input ngModel name="username" #username="ngModel" type="text" placeholder="Username" required>
-                <div class="required"><p *ngIf="!username.valid && username.touched">Username is required</p></div>
-                <input ngModel name="password" #password="ngModel" type="password" placeholder="Password" required>
-                <div class="required"><p *ngIf="!password.valid && password.touched">Password is required</p></div>
+                <input [(ngModel)]="username" name="username" type="text" placeholder="Username" required>
+                <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
             </form>
         
-            <app-button routerLink="../home-screen" b_color="#5050fd" t_color="white" fs="17px" fw="bold" text="Sign Up"></app-button>
+            <app-button (click) = 'createUser()' b_color="#5050fd" t_color="white" fs="17px" fw="bold" text="Sign Up"></app-button>
             <div class="help-option">
                 <app-hr w="300px"></app-hr>
                 <app-button routerLink="../login" b_color="#4CAF50" t_color="white" fs="17px" fw="bold" text="Already have an account?"></app-button>

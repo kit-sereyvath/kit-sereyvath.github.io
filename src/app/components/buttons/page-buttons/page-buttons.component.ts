@@ -12,7 +12,7 @@ export class PageButtonsComponent implements OnInit {
   constructor(private weatherDataService: WeatherDataService) { }
 
   page = 1
-  total_page = 5
+  total_page = 1
   @Output() backward = new EventEmitter();
   @Output() forward = new EventEmitter();
 

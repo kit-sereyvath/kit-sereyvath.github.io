@@ -16,7 +16,7 @@ export class WeatherDataService {
   constructor(private http: HttpClient) { }
 
   getAllWeatherData(searchParams: WeatherData): Observable<WeatherData[]>{
-    const res = this.http.get<WeatherData[]>("http://localhost:3000/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
+    const res = this.http.get<WeatherData[]>("https://cambodia-weather.herokuapp.com/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
     res.subscribe(data => {
       this.length = data.length
     })
@@ -25,7 +25,7 @@ export class WeatherDataService {
 
 
   insertWeatherData(): Observable<ResponseMessage>{
-    return this.http.post<ResponseMessage>("http://localhost:3000/weather-data", this.weatherData)
+    return this.http.post<ResponseMessage>("https://cambodia-weather.herokuapp.com/weather-data", this.weatherData)
   }
 
 
@@ -33,7 +33,7 @@ export class WeatherDataService {
     this.currentMessage.subscribe(data => {
       this.weatherData.id = data.id
     })
-    return this.http.put<ResponseMessage>("http://localhost:3000/weather-data", this.weatherData)
+    return this.http.put<ResponseMessage>("https://cambodia-weather.herokuapp.com/weather-data", this.weatherData)
   }
 
   deleteWeatherData(): Observable<ResponseMessage>{
@@ -41,7 +41,7 @@ export class WeatherDataService {
     this.currentMessage.subscribe(data => {
       searchParams = data
     })
-    return this.http.delete<ResponseMessage>("http://localhost:3000/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
+    return this.http.delete<ResponseMessage>("https://cambodia-weather.herokuapp.com/weather-data", {params: {province: searchParams.province, date: searchParams.date, time: searchParams.time}})
   }
 
   private messageSource = new BehaviorSubject(new WeatherData);

@@ -14,11 +14,11 @@ export class UserService {
   username = ""
 
   authenticateUser(user: User): Observable<ResponseMessage>{
-    return this.http.post<ResponseMessage>('http://localhost:3000/user', user)
+    return this.http.post<ResponseMessage>('https://cambodia-weather.herokuapp.com/user', user)
   }
 
   createUser(user: User): Observable<ResponseMessage>{
-    return this.http.post<ResponseMessage>('http://localhost:3000/user/new', user)
+    return this.http.post<ResponseMessage>('https://cambodia-weather.herokuapp.com/user/new', user)
   }
 
   initUsername(username: string){

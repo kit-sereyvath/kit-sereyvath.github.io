@@ -15,17 +15,6 @@
     padding: 20px 0 10px 50px;
 }
 
-.modification-table {
-    background-color: white;
-    height: 440px;
-    width: 670px;
-    margin: 10px;
-    border: 1px solid #9F9F9F;
-    border-radius: 10px;
-    
-    flex-direction: column;
-}
-
 .container {
     display: flex;
     justify-content: space-evenly;

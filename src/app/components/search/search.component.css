@@ -32,3 +32,11 @@
     border: 1px solid #9F9F9F;
     width: 170px;
 }
+
+.search-bar>select {
+    padding: 6px 10px;
+    margin: 5px;
+    border-radius: 7px;
+    border: 1px solid #9F9F9F;
+    width: 130px;
+}
